@@ -1,0 +1,109 @@
+/* Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: auto;
+    padding: auto;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        ". sm sm m m m m m m m m ."
+        "f f f f f f f f f f f f";
+}
+
+header{
+    width: 100%;
+    background-color: #072227;
+    color: #fff;
+    grid-area: h;
+    text-align: center;
+    padding: 5px;
+}
+
+nav{
+    width: 100%;
+    background-color: #35858B;
+    grid-area: n;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 10px 0 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+aside{
+    background-color: #4FBDBA;
+    grid-area: sm;
+    width: 100%;
+    margin: 0;
+}
+
+main{
+    background-color: #AEFEFF;
+    grid-area: m;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+article{
+    background-color: #fdfdfd;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+footer{
+    background-color: #072227;
+    color: #fff;
+    grid-area: f;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "n n n n n n sm sm sm sm sm sm"
+            "m m m m m m m m m m m m"
+            "f f f f f f f f f f f f";
+    }
+
+    aside{
+        text-align: center;
+        padding: 3px;
+        grid-area: sm;
+        margin: 0;
+    }
+
+    article{
+        width: 80%;
+    }
+}
